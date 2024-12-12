@@ -1450,7 +1450,9 @@ do
             function KeybindsToggle:Display(State)
                 KeybindsToggleInner.BackgroundColor3 = State and Library.AccentColor or Library.MainColor;
                 KeybindsToggleInner.BorderColor3 = State and Library.AccentColorDark or Library.OutlineColor;
-                KeybindsToggleLabel.TextColor3 = State and Library.AccentColor or Library.FontColor;
+                if KeyPicker.ColoredText then
+                    KeybindsToggleLabel.TextColor3 = State and Library.AccentColor or Library.FontColor;
+                end
                 
                 Library.RegistryMap[KeybindsToggleInner].Properties.BackgroundColor3 = State and 'AccentColor' or 'MainColor';
                 Library.RegistryMap[KeybindsToggleInner].Properties.BorderColor3 = State and 'AccentColorDark' or 'OutlineColor';
