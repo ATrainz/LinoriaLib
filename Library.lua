@@ -15,7 +15,7 @@ local ProtectGui = protectgui or (function() end);
 local GetHUI = gethui or (function() return CoreGui end);
 
 local ScreenGui = Instance.new('ScreenGui');
-ScreenGui.DisplayOrder = 1000000
+ScreenGui.DisplayOrder = math.huge
 pcall(ProtectGui, ScreenGui);
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
@@ -3510,7 +3510,7 @@ function Library:LeftNotify(Text, Time, SoundId)
         BorderColor3 = Color3.new(0, 0, 0);
         Size = UDim2.new(0, 0, 0, YSize);
         ClipsDescendants = true;
-        ZIndex = 100;
+        ZIndex = 100000;
         Parent = Library.LeftNotificationArea;
     });
 
@@ -3519,7 +3519,7 @@ function Library:LeftNotify(Text, Time, SoundId)
         BorderColor3 = Library.OutlineColor;
         BorderMode = Enum.BorderMode.Inset;
         Size = UDim2.new(1, 0, 1, 0);
-        ZIndex = 101;
+        ZIndex = 100001;
         Parent = NotifyOuter;
     });
 
@@ -3533,7 +3533,7 @@ function Library:LeftNotify(Text, Time, SoundId)
         BorderSizePixel = 0;
         Position = UDim2.new(0, 1, 0, 1);
         Size = UDim2.new(1, -2, 1, -2);
-        ZIndex = 102;
+        ZIndex = 100002;
         Parent = NotifyInner;
     });
 
@@ -3561,7 +3561,7 @@ function Library:LeftNotify(Text, Time, SoundId)
         Text = Text;
         TextXAlignment = Enum.TextXAlignment.Left;
         TextSize = 14;
-        ZIndex = 103;
+        ZIndex = 100003;
         Parent = InnerFrame;
     });
 
@@ -3570,7 +3570,7 @@ function Library:LeftNotify(Text, Time, SoundId)
         BorderSizePixel = 0;
         Position = UDim2.new(0, -1, 0, -1);
         Size = UDim2.new(0, 3, 1, 2);
-        ZIndex = 104;
+        ZIndex = 100004;
         Parent = NotifyOuter;
     });
 
@@ -3613,7 +3613,7 @@ function Library:RightNotify(Text, Time, SoundId)
         BorderColor3 = Color3.new(0, 0, 0);
         Size = UDim2.new(0, 0, 0, YSize);
         ClipsDescendants = true;
-        ZIndex = 100;
+        ZIndex = 100000;
         Parent = Library.RightNotificationArea;
     });
 
@@ -3622,7 +3622,7 @@ function Library:RightNotify(Text, Time, SoundId)
         BorderColor3 = Library.OutlineColor;
         BorderMode = Enum.BorderMode.Inset;
         Size = UDim2.new(1, 0, 1, 0);
-        ZIndex = 101;
+        ZIndex = 100001;
         Parent = NotifyOuter;
     });
 
@@ -3636,7 +3636,7 @@ function Library:RightNotify(Text, Time, SoundId)
         BorderSizePixel = 0;
         Position = UDim2.new(0, 1, 0, 1);
         Size = UDim2.new(1, -2, 1, -2);
-        ZIndex = 102;
+        ZIndex = 100002;
         Parent = NotifyInner;
     });
 
@@ -3665,7 +3665,7 @@ function Library:RightNotify(Text, Time, SoundId)
         Text = Text;
         TextXAlignment = Enum.TextXAlignment.Right;
         TextSize = 14;
-        ZIndex = 103;
+        ZIndex = 100003;
         Parent = InnerFrame;
     });
 
@@ -3675,7 +3675,7 @@ function Library:RightNotify(Text, Time, SoundId)
         BorderSizePixel = 0;
         Position = UDim2.new(1, -1, 0, -1);
         Size = UDim2.new(0, 3, 1, 2);
-        ZIndex = 104;
+        ZIndex = 100004;
         Parent = NotifyOuter;
     });
 
