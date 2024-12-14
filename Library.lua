@@ -1850,11 +1850,6 @@ do
             Groupbox:Resize();
         end
 
-        function Label:OnChanged(Func)
-            TextLabel.Changed = Func;
-            Func(TextLabel.Text)
-        end;
-
         if (not Data.DoesWrap) then
             setmetatable(Label, BaseAddons);
         end
